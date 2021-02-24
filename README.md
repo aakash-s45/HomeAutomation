@@ -6,6 +6,7 @@ Broker take the message from publisher and send this to subscribers.
 To integrate google assistant Node-Red-Home-Automation (NoRA) is used with Node-Red which is linked to MQTT broker.
 
 Apps, Programs and Websites Used:
+
             1. Node-Red
             2. MQTT Broker
             3. google Home
