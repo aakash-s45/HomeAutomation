@@ -70,7 +70,7 @@ void connect() {
         Serial.print("Attempting MQTT connection...");
         if (client.connect("ESP1", mqttUser, mqttPassword)) {
             Serial.println("connected");
-            client.subscribe("tech2aks@gmail.com/smartlight");
+            client.subscribe("/****TOPIC*******/");
             
         }
         else {
