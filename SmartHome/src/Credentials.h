@@ -1,2 +1,2 @@
-const char *ssid = "Redmi 7";
-const char *password = "ramuanuj";
+const char *ssid = "********";
+const char *password = "*******";
