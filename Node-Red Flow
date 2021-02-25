@@ -1,0 +1,36 @@
+[
+    {
+        "id": "74dbdadb.191cd4",
+        "type": "nora-light",
+        "z": "5d5f9b89.bd8aa4",
+        "devicename": "Light",
+        "lightcolor": false,
+        "brightnesscontrol": false,
+        "turnonwhenbrightnesschanges": false,
+        "passthru": false,
+        "statepayload": true,
+        "brightnessoverride": "",
+        "roomhint": "",
+        "name": "Second Light",
+        "nora": "d3375a9e.d999f8",
+        "topic": "esp1/room",
+        "onvalue": "ONL2",
+        "onvalueType": "str",
+        "offvalue": "OFFL2",
+        "offvalueType": "str",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "3f82bf1f.2cf3"
+            ]
+        ]
+    },
+    {
+        "id": "d3375a9e.d999f8",
+        "type": "nora-config",
+        "name": "nora config",
+        "group": "",
+        "notify": false
+    }
+]
