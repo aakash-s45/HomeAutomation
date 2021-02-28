@@ -1,0 +1,186 @@
+[
+    {
+        "id": "54c63c2b.cfe164",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8435b46.aacb248",
+        "type": "mqtt out",
+        "z": "54c63c2b.cfe164",
+        "name": "MQTT",
+        "topic": "esp2/door",
+        "qos": "",
+        "retain": "",
+        "broker": "351aa99f.518a16",
+        "x": 470,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "ffb3ce6.1dc733",
+        "type": "nora-garage",
+        "z": "54c63c2b.cfe164",
+        "devicename": "Door",
+        "roomhint": "",
+        "name": "Door",
+        "passthru": false,
+        "nora": "d3375a9e.d999f8",
+        "topic": "esp2/door",
+        "openvalue": "ON",
+        "openvalueType": "str",
+        "closevalue": "OFF",
+        "closevalueType": "str",
+        "x": 270,
+        "y": 420,
+        "wires": [
+            [
+                "a5a818bf.1f62b8"
+            ]
+        ]
+    },
+    {
+        "id": "3730cf94.00319",
+        "type": "debug",
+        "z": "54c63c2b.cfe164",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c497ca19.f5bfd8",
+        "type": "debug",
+        "z": "54c63c2b.cfe164",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d8f745db.2fd288",
+        "type": "ui_button",
+        "z": "54c63c2b.cfe164",
+        "name": "",
+        "group": "b2e83f95.9ff91",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Full OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "FOFF",
+        "payloadType": "str",
+        "topic": "esp2/door",
+        "topicType": "str",
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "8435b46.aacb248",
+                "3730cf94.00319"
+            ]
+        ]
+    },
+    {
+        "id": "a5a818bf.1f62b8",
+        "type": "ui_switch",
+        "z": "54c63c2b.cfe164",
+        "name": "",
+        "label": "DOOR",
+        "tooltip": "",
+        "group": "b2e83f95.9ff91",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "esp2/door",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "ffb3ce6.1dc733",
+                "8435b46.aacb248",
+                "c497ca19.f5bfd8"
+            ]
+        ]
+    },
+    {
+        "id": "351aa99f.518a16",
+        "type": "mqtt-broker",
+        "name": "RPi",
+        "broker": "192.168.43.54",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "d3375a9e.d999f8",
+        "type": "nora-config",
+        "name": "nora config",
+        "group": "",
+        "notify": false
+    },
+    {
+        "id": "b2e83f95.9ff91",
+        "type": "ui_group",
+        "name": "Lamp",
+        "tab": "83c305d0.c61b98",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "83c305d0.c61b98",
+        "type": "ui_tab",
+        "name": "Room",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
