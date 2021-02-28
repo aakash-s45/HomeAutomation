@@ -2,8 +2,8 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char *ssid = "OnePlus 7";
-const char *password = "ramuanuj";
+const char *ssid = "SSID";
+const char *password = "PASSWORD";
 
 const char *mqttServer = "192.168.43.54";
 const int mqttPort = 1883;
